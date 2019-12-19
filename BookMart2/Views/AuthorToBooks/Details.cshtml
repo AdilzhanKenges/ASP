@@ -1,0 +1,30 @@
+﻿@model BookMart2.Models.AuthorToBook
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AuthorToBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Authors)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Authors.AuthorId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Books)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Books.BookId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AuthorToBookId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
